@@ -1,5 +1,4 @@
 <Project>
     <Target Name="RemoveMacAppMetadata" BeforeTargets="_CodesignAppBundle">
-        <Exec Command="xattr -cr '$(MSBuildProjectDirectory)/bin/Debug/net9.0-maccatalyst/maccatalyst-arm64/Pourfect.app'" />
-    </Target>
+        <Exec Command="find $(MSBuildProjectDirectory)/bin/Debug -name '*.app' -exec xattr -cr {} \;" />    </Target>
 </Project>
