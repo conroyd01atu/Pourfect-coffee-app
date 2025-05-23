@@ -17,16 +17,16 @@ jobs:
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: '8.0.x'  
+        dotnet-version: '8.0.x'
 
     - name: Restore dependencies
-      run: dotnet restore
+      run: dotnet restore Pourfect.Tests/Pourfect.Tests.csproj
 
-    - name: Check formatting
-      run: dotnet format --verify-no-changes || echo "::warning::Code not formatted correctly"
+    - name: Check C# formatting
+      run: dotnet format Pourfect.Tests/Pourfect.Tests.csproj --verify-no-changes || echo "::warning::Code not formatted correctly"
 
-    - name: Build app
-      run: dotnet build --configuration Release
+    - name: Build unit test project
+      run: dotnet build Pourfect.Tests/Pourfect.Tests.csproj --no-restore
 
-    - name: Run tests
-      run: dotnet test --no-build --verbosity normal
+    - name: Run unit tests
+      run: dotnet test Pourfect.Tests/Pourfect.Tests.csproj --no-build --verbosity normal
