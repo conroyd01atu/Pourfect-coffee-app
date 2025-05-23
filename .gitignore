@@ -1,3 +1,47 @@
+# Build artifacts
 **/bin/
 **/obj/
+
+# macOS system files
 .DS_Store
+
+# JetBrains Rider / Android Studio
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# VS Code settings (optional)
+.vscode/
+
+# User-specific files
+*.user
+*.userosscache
+*.suo
+
+# Auto-generated logs and settings
+*.log
+*.tlog
+*.cache
+*.dbmdl
+*.pdb
+
+# NuGet packages
+*.nupkg
+# Exclude downloaded NuGet packages, keep source-based ones
+**/packages/
+*.snupkg
+
+# Android build files
+*.apk
+*.ap_
+
+# iOS & MacCatalyst
+*.ipa
+*.xcuserstate
+*.xcworkspace/
+*.xcuserdata/
+*.xcodeproj/project.xcworkspace/
+
+# MAUI specific
+Platforms/**/bin/
+Platforms/**/obj/
