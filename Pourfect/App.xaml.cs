@@ -1,0 +1,1 @@
+MainPage = new Views.MainPage();
