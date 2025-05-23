@@ -1,0 +1,38 @@
+root = true
+
+[*.cs]
+# Use 2 spaces for indentation (Google style)
+indent_style = space
+indent_size = 2
+
+# Newline settings
+end_of_line = lf
+insert_final_newline = true
+
+# Encoding
+charset = utf-8
+
+# Trim trailing whitespace
+trim_trailing_whitespace = true
+
+# Naming conventions (Google-inspired)
+dotnet_naming_rule.private_fields_should_have_underscore.symbols = private_fields
+dotnet_naming_rule.private_fields_should_have_underscore.style = underscore_prefix
+dotnet_naming_rule.private_fields_should_have_underscore.severity = suggestion
+
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.accessibility = private
+
+dotnet_naming_style.underscore_prefix.required_prefix = _
+dotnet_naming_style.underscore_prefix.capitalization = camel_case
+
+# Require braces even for single-line statements
+csharp_prefer_braces = true:suggestion
+
+# Require expression-bodied members for properties
+csharp_style_expression_bodied_properties = true:suggestion
+
+# Require using directives outside of namespaces
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = true
+file_header_template = unset
