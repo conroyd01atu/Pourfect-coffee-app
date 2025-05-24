@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.companyname.pourfect">
+    <application android:label="Pourfect" android:theme="@style/Maui.SplashTheme">
+        <meta-data android:name="applicationId" android:value="com.companyname.pourfect" />
+    </application>
+</manifest>
