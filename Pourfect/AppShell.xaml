@@ -15,6 +15,11 @@
             Title="History" 
             ContentTemplate="{DataTemplate views:BrewListPage}" 
             Icon="history.png" />
+            
+        <ShellContent 
+            Title="Guide" 
+            ContentTemplate="{DataTemplate views:RecipePage}" 
+            Icon="guide.png" /> 
 
         <!-- More tabs will be added later -->
 

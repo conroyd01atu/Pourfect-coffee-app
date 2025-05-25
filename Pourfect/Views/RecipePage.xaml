@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Pourfect.Views.RecipePage"
+             Title="Brew Guide">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Select Brew Method" />
+            <Picker x:Name="MethodPicker" SelectedIndexChanged="OnMethodChanged">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>V60</x:String>
+                        <x:String>Kalita</x:String>
+                        <x:String>Aeropress</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Ratio (1:x)" />
+            <Label x:Name="RatioLabel" FontAttributes="Bold" />
+
+            <Label Text="Bloom Time (s)" />
+            <Label x:Name="BloomTimeLabel" FontAttributes="Bold" />
+
+            <Label Text="Water Temperature (°C)" />
+            <Label x:Name="TempLabel" FontAttributes="Bold" />
+
+            <Label Text="Brew Steps" />
+            <Label x:Name="StepsLabel" LineBreakMode="WordWrap" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
