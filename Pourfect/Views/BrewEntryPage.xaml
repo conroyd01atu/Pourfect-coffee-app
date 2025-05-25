@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             x:Class="Pourfect.Views.BrewEntryPage"
+             Title="New Brew">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="20" Spacing="15">
+
+            <Label Text="Method" />
+            <Picker x:Name="MethodPicker">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>V60</x:String>
+                        <x:String>Kalita</x:String>
+                        <x:String>Aeropress</x:String>
+                        <x:String>Chemex</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Label Text="Dose (g)" />
+            <Entry x:Name="DoseEntry" Keyboard="Numeric" />
+
+            <Label Text="Water (ml)" />
+            <Entry x:Name="WaterEntry" Keyboard="Numeric" />
+
+            <Label Text="Bloom Time (s)" />
+            <Entry x:Name="BloomEntry" Keyboard="Numeric" />
+
+            <Label Text="Total Brew Time (s)" />
+            <Entry x:Name="TotalTimeEntry" Keyboard="Numeric" />
+
+            <Label Text="Notes" />
+            <Editor x:Name="NotesEditor" HeightRequest="100" />
+
+            <Button Text="Save Brew" Clicked="OnSaveClicked" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
