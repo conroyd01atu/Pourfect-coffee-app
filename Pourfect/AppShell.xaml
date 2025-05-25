@@ -11,7 +11,12 @@
             ContentTemplate="{DataTemplate views:BrewEntryPage}" 
             Icon="log.png" />
 
-        <!-- More tabs like Brew List, Settings will be added later -->
+        <ShellContent 
+            Title="History" 
+            ContentTemplate="{DataTemplate views:BrewListPage}" 
+            Icon="history.png" />
+
+        <!-- More tabs will be added later -->
 
     </TabBar>
 
